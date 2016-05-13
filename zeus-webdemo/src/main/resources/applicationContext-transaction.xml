@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd 
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx.xsd ">
+
+	  <bean id = "transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+    	<property name="dataSource" ref="jlerp_db" />
+      </bean>
+      <!-- 声明式事务配置 -->
+	  <tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+				<tx:method name="do*" propagation="REQUIRED" rollback-for="Throwable, Exception, RuntimeException"/>
+			<tx:method name="del*" propagation="REQUIRED" rollback-for="Throwable, Exception, RuntimeException"/>
+			<tx:method name="save*" propagation="REQUIRED" rollback-for="Throwable, Exception, RuntimeException"/>
+			<tx:method name="add*" propagation="REQUIRED" rollback-for="Throwable, Exception, RuntimeException"/>
+			<tx:method name="begin*" propagation="REQUIRED" rollback-for="Throwable, Exception, RuntimeException"/>
+			<tx:method name="end*" propagation="REQUIRED" rollback-for="Throwable, Exception, RuntimeException"/>
+			<tx:method name="update*" propagation="REQUIRED" rollback-for="Throwable, Exception, RuntimeException"/>
+			<tx:method name="modify*" propagation="REQUIRED" rollback-for="Throwable, Exception, RuntimeException"/>
+			<tx:method name="query*" propagation="NOT_SUPPORTED"/>
+			<tx:method name="load*" propagation="NOT_SUPPORTED"/>
+			<tx:method name="find*" propagation="NOT_SUPPORTED"/>
+			<tx:method name="*" read-only="true" propagation="SUPPORTS" />
+	</tx:attributes>
+	</tx:advice>
+	<!-- service切面 -->
+	<aop:config>
+		<aop:pointcut expression="execution(* com.dengliang.zeus.webdemo.services.*.*(..))" id="pointCut" />
+		<aop:advisor  pointcut-ref="pointCut" advice-ref="txAdvice"/>
+	</aop:config>
+   
+
+	
+
+
+	
+</beans>

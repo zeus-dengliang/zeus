@@ -1,0 +1,22 @@
+package com.dengliang.zeus.framework.jdbc.ds;
+
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.TransactionDefinition;
+/**
+ * 事务管理
+ * @author 100755_邓亮 2014年1月1日
+ *
+ */
+public class DbDataSourceTransactionManager  extends DataSourceTransactionManager{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1749133882378388130L;
+	@Override
+	protected void doBegin(Object transaction, TransactionDefinition definition) {
+		// TODO Auto-generated method stub
+		//默认第0个数据库是主库
+		DbContextHolder.setDbNum(0);
+		super.doBegin(transaction, definition);
+	}
+}

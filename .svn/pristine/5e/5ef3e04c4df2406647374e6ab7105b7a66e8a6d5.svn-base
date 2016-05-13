@@ -1,0 +1,8 @@
+package com.dengliang.zeus.framework.dao;
+
+import com.dengliang.zeus.framework.jdbc.core.ZeusJdbcAccessor;
+
+public class ZeusShardingDaoSupport extends ZeusJdbcAccessor implements	IZeusDAOBase {
+
+	
+}

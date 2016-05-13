@@ -1,0 +1,189 @@
+15:25:20,609  INFO ClassPathXmlApplicationContext:512 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1a9b034: startup date [Tue Apr 28 15:25:20 CST 2015]; root of context hierarchy
+15:25:20,687  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [applicationContext-simpledb.xml]
+15:25:20,875  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [applicationContext-dao.xml]
+15:25:20,906  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [applicationContext-service.xml]
+15:25:21,093  INFO DefaultListableBeanFactory:603 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2f8903: defining beans [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,parentDataSource,jlerp_db,zeusdaoSupport,dajc01DAO,dajc01Service]; root of factory hierarchy
+15:25:21,171 ERROR DruidAbstractDataSource:935 - maxIdle is deprecated
+15:25:21,203 ERROR DruidAbstractDataSource:935 - maxIdle is deprecated
+15:25:21,281  WARN ClassPathXmlApplicationContext:486 - Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.jl.net.da.service.impl.Dajc01Service] for bean with name 'dajc01Service' defined in class path resource [applicationContext-service.xml]; nested exception is java.lang.ClassNotFoundException: com.jl.net.da.service.impl.Dajc01Service
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1278)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1347)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:913)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:617)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:934)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.dengliang.zeus.webdemo.test.SimpledbTest.getBean(SimpledbTest.java:29)
+	at com.dengliang.zeus.webdemo.test.SimpledbTest.testDataSourceInterceptor(SimpledbTest.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.lang.ClassNotFoundException: com.jl.net.da.service.impl.Dajc01Service
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:265)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:419)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1270)
+	... 33 more
+15:25:21,281  INFO DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2f8903: defining beans [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,parentDataSource,jlerp_db,zeusdaoSupport,dajc01DAO,dajc01Service]; root of factory hierarchy
+15:28:33,937  INFO ClassPathXmlApplicationContext:512 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1a9b034: startup date [Tue Apr 28 15:28:33 CST 2015]; root of context hierarchy
+15:28:34,000  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [applicationContext-simpledb.xml]
+15:28:34,156  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [applicationContext-dao.xml]
+15:28:34,171  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [applicationContext-service.xml]
+15:28:34,281  INFO DefaultListableBeanFactory:603 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2f8903: defining beans [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,parentDataSource,jlerp_db,zeusdaoSupport,dajc01DAO,dajc01Service]; root of factory hierarchy
+15:28:34,359 ERROR DruidAbstractDataSource:935 - maxIdle is deprecated
+15:28:34,390 ERROR DruidAbstractDataSource:935 - maxIdle is deprecated
+15:28:34,437  WARN ClassPathXmlApplicationContext:486 - Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.jl.net.da.service.impl.Dajc01Service] for bean with name 'dajc01Service' defined in class path resource [applicationContext-service.xml]; nested exception is java.lang.ClassNotFoundException: com.jl.net.da.service.impl.Dajc01Service
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1278)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1347)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:913)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:617)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:934)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.dengliang.zeus.webdemo.test.SimpledbTest.getBean(SimpledbTest.java:29)
+	at com.dengliang.zeus.webdemo.test.SimpledbTest.testDataSourceInterceptor(SimpledbTest.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.lang.ClassNotFoundException: com.jl.net.da.service.impl.Dajc01Service
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:265)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:419)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1270)
+	... 33 more
+15:28:34,437  INFO DefaultListableBeanFactory:444 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2f8903: defining beans [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,parentDataSource,jlerp_db,zeusdaoSupport,dajc01DAO,dajc01Service]; root of factory hierarchy
+15:30:06,796  INFO ClassPathXmlApplicationContext:512 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1a9b034: startup date [Tue Apr 28 15:30:06 CST 2015]; root of context hierarchy
+15:30:06,859  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [applicationContext-simpledb.xml]
+15:30:07,015  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [applicationContext-dao.xml]
+15:30:07,031  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [applicationContext-service.xml]
+15:30:07,140  INFO DefaultListableBeanFactory:603 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2f8903: defining beans [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,parentDataSource,jlerp_db,zeusdaoSupport,dajc01DAO,dajc01Service]; root of factory hierarchy
+15:30:07,203 ERROR DruidAbstractDataSource:935 - maxIdle is deprecated
+15:30:07,234 ERROR DruidAbstractDataSource:935 - maxIdle is deprecated
+15:30:07,562 ERROR DruidDataSource:646 - dataSource init error
+java.sql.SQLException: oracle.jdbc.driver.OracleDriver
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:520)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:583)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:915)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:911)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:98)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:382)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:456)
+	at com.dengliang.zeus.framework.dao.ZeusDaoSupport.queryObj(ZeusDaoSupport.java:98)
+	at com.dengliang.zeus.webdemo.dao.base.Dajc01DAOBase.findByPK(Dajc01DAOBase.java:79)
+	at com.dengliang.zeus.webdemo.test.SimpledbTest.testDataSourceInterceptor(SimpledbTest.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.lang.ClassNotFoundException: oracle.jdbc.driver.OracleDriver
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:191)
+	at com.alibaba.druid.util.JdbcUtils.createDriver(JdbcUtils.java:518)
+	... 34 more
+15:30:07,562  INFO DruidDataSource:655 - {dataSource-1} inited
+15:30:48,687  INFO ClassPathXmlApplicationContext:512 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1c55e69: startup date [Tue Apr 28 15:30:48 CST 2015]; root of context hierarchy
+15:30:48,796  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [applicationContext-simpledb.xml]
+15:30:48,968  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [applicationContext-dao.xml]
+15:30:48,984  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [applicationContext-service.xml]
+15:30:49,093  INFO DefaultListableBeanFactory:603 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@cbd22a: defining beans [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,parentDataSource,jlerp_db,zeusdaoSupport,dajc01DAO,dajc01Service]; root of factory hierarchy
+15:30:49,156 ERROR DruidAbstractDataSource:935 - maxIdle is deprecated
+15:30:49,187 ERROR DruidAbstractDataSource:935 - maxIdle is deprecated
+15:30:49,609 ERROR DruidDataSource:840 - invalid oracle validationQuery. SELECT 'x', may should be : SELECT 'x' FROM DUAL
+15:30:56,390  INFO DruidDataSource:655 - {dataSource-1} inited
+15:56:36,125  INFO ClassPathXmlApplicationContext:512 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@63afa4: startup date [Tue Apr 28 15:56:36 CST 2015]; root of context hierarchy
+15:56:36,234  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [applicationContext-simpledb.xml]
+15:56:36,421  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [applicationContext-dao.xml]
+15:56:36,437  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [applicationContext-service.xml]
+15:56:36,546  INFO DefaultListableBeanFactory:603 - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@19bc338: defining beans [org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,parentDataSource,jlerp_db,zeusdaoSupport,dajc01DAO,dajc01Service]; root of factory hierarchy
+15:56:36,609 ERROR DruidAbstractDataSource:935 - maxIdle is deprecated
+15:56:36,656 ERROR DruidAbstractDataSource:935 - maxIdle is deprecated
+15:56:37,109 ERROR DruidDataSource:840 - invalid oracle validationQuery. SELECT 'x', may should be : SELECT 'x' FROM DUAL
+15:56:43,875  INFO DruidDataSource:655 - {dataSource-1} inited

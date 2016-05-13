@@ -1,0 +1,19 @@
+package com.dengliang.zeus.framework.jdbc.ds;
+
+import javax.sql.DataSource;
+
+import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
+import org.springframework.util.Assert;
+/**
+ * zeus 多数据源
+ * @author 100755_邓亮 2015年1月1日
+ *
+ */
+public class DynamicDataSource extends AbstractRoutingDataSource {
+
+	@Override
+	protected Object determineCurrentLookupKey() {
+		Object dbnum=DbContextHolder.getDbNum();
+		return dbnum;
+	}
+}

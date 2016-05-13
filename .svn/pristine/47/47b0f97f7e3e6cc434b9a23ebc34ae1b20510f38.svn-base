@@ -1,0 +1,18 @@
+package com.dengliang.zeus.framework.jdbc.ds;
+/**
+ * zeus datasour holder
+ * @author 100755_邓亮 2015年1月1日
+ *
+ */
+public class DbContextHolder {
+	private static final ThreadLocal<Integer> contextHolder = new ThreadLocal<Integer>();
+
+	public static void setDbNum(Integer dbNum) {
+		contextHolder.set(dbNum);
+	}
+
+	public static Integer getDbNum() {
+		return contextHolder.get();
+	}
+
+}

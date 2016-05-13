@@ -1,0 +1,1 @@
+zeus 是一个基于spring jdbctemplate的轻量级持久层框架(支持oracle和mysql),吸收了淘宝druiddatasource的优点,开放自由;实现了自动切换(和zookeeper配合),读写分离,分库分表, 正如他的名字一样,zeus(宙斯)众神之王,希望他是个传说
